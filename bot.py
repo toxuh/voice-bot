@@ -3,7 +3,7 @@ import urllib.request
 import json
 import tokens
 
-bot = telebot.TeleBot(TOKEN)
+bot = telebot.TeleBot(tokens.TOKEN)
 
 @bot.message_handler(content_types=['voice'])
 def default_command(message):
