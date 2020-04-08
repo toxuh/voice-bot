@@ -21,8 +21,6 @@ def default_command(message):
   url = urllib.request.Request("https://stt.api.cloud.yandex.net/speech/v1/stt:recognize?%s" % params, data=data)
   url.add_header("Authorization", "Bearer %s" % tokens.IAM_TOKEN)
 
-  print(url)
-
   responseData = urllib.request.urlopen(url).read().decode('UTF-8')
   decodedData = json.loads(responseData)
 
